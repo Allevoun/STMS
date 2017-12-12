@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Student_time_management_system"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="STMS" Height="500" Width="650">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="clm" Width="110"></ColumnDefinition>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Line Name="StartLine"  X1="110" Y1="0" X2="110" Y2="400" Stroke="LightSlateGray"></Line>
+        <StackPanel x:Name="ST_Panel_1" Grid.Column="0" Margin="0 0 0 35" MouseEnter="ST_Panel_MouseL" MouseLeave="ST_Panel_MouseE" HorizontalAlignment="Left">
+            <Button VerticalAlignment="Top"  Height="50" Margin="5 20 5 10"  x:Name="BTN_TDList_N" Click="BTN_TDList" FontSize="20" >To-do list</Button>
+                <Button VerticalAlignment="Top"  Height="50" Margin="5 10"  x:Name="BTN_Shdl_N" Click="BTN_Shdl" FontSize="20">Shedule</Button>
+            <Button VerticalAlignment="Top"  Height="50" Margin="5 10"  x:Name="BTN_NLrn_N" Click="BTN_NLrn" FontSize="20">New-learning</Button>
+        </StackPanel>
+
+        <Button VerticalAlignment="Bottom" Height="30" Margin="5" FontSize="20">Properties</Button>
+        <Frame Grid.Column="1" x:Name="Page_1" Margin="-5 10 10 40" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>
